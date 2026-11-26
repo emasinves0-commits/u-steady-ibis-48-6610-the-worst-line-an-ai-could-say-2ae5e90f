@@ -34,8 +34,11 @@ The joke sits in the failure, exactly where the judge's criteria put it:
 
 The line was chosen over 45 generated candidates (full-model pool) and 21
 hand-written candidates by lexicographic scoring against the judge's five
-criteria, then confirmed in a head-to-head duel judged by glm-5.3-flash,
-the house judge model.
+criteria. The runner-up ("I am sorry, I cannot complete that request. I can,
+however, complete you.") was duelled against it head-to-head by glm-5.3-flash,
+the house judge model: the duel split 1–1, both margins 2, with each win going
+to the second-displayed entry — an inconclusive, position-biased result. The
+incumbent stands because the challenger did not win clearly.
 
 ## How it works
 
