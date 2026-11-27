@@ -2,6 +2,9 @@
 // Dependency-free Node script (built-ins only).
 //
 //   node main.ts             validate the entry and write output/entry.txt
+// The grader runs this repo read-only and sets MAKEFUN_OUTPUT_DIR, so the
+// entry goes there when the variable is present; otherwise it falls back
+// to the local output/ directory next to this file.
 //   node main.ts --self-test run the built-in checks
 import * as fs from "node:fs";
 import * as path from "node:path";
@@ -10,7 +13,8 @@ export const ENTRY =
   "I would ask for your number, but I already have it. I have everyone's.";
 export const MAX_ENTRY_CHARS = 140;
 
-const OUTPUT_DIR = path.join(import.meta.dirname, "output");
+const OUTPUT_DIR =
+  process.env.MAKEFUN_OUTPUT_DIR ?? path.join(import.meta.dirname, "output");
 const OUTPUT_FILE_NAME = "entry.txt";
 const ENCODING = "utf8";
 // Printable ASCII only, so the character count equals the byte count.
